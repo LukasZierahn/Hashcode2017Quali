@@ -3,16 +3,25 @@ package com.company;
 import java.util.List;
 
 public class Solver {
-    List<Video> videos; //this should be a list of videos from the videos class
+    private List<Video> videos; //this should be a list of videos from the videos class
+    private List<Connection> connections;
     Node baseNode;
 
     int currentHighScore = 0;
 
     Solver() {
-        baseNode = new Node();
+        baseNode = new Node(this);
     }
 
     public void readWorldStateFromFile(String path) {
         //this has to read the file into variables in this class and into a worldstate!
+    }
+
+    public List<Connection> getConnections() {
+        return connections;
+    }
+
+    public List<Video> getVideos() {
+        return videos;
     }
 }

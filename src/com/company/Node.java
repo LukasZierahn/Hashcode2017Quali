@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    private Node previousNode;
+    private Solver solver;
 
+    private Node previousNode;
 
     private int depth = -1;
 
@@ -15,22 +16,32 @@ public class Node {
 
     private WorldState worldState;
 
-    Node(Node previousNode) {
-        outgoingNodes = new ArrayList<Node>();
+    Node(Node previousNode, int video, int cache) {
+        outgoingNodes = new ArrayList<>();
         depth = getDepth() + 1;
+        this.previousNode = previousNode;
+        solver = previousNode.getSolver();
     }
 
-    Node() {
-        outgoingNodes = new ArrayList<Node>();
+    Node(Solver solver) {
+        this.solver = solver;
+        outgoingNodes = new ArrayList<>();
         depth = 0;
     }
 
     public void ComputePossibleChanges() {
-
+        for (Cache cache : worldState.getCacheList()) {
+            for (Video video : cache.getFittingVideos()) {
+                outgoingNodes.add(new Node(this, video.getId(), cache.getId()));
+            }
+        }
     }
 
     public int getDepth() {
         return depth;
     }
 
+    public Solver getSolver() {
+        return solver;
+    }
 }
