@@ -71,4 +71,9 @@ public class Solver {
     public List<Video> getVideos() {
         return videos;
     }
+
+    connectionScore(int videoID, int cacheID, int dcSpeed, int cache2endpointSpeed)
+    {
+
+    }
 }
