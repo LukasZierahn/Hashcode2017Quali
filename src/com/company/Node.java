@@ -19,14 +19,14 @@ public class Node {
 
     private WorldState worldState;
 
-    Node(Node previousNode, int video, int cache) {
+    Node(Node previousNode, int videoId, int cacheId) {
         outgoingNodes = new ArrayList<>();
         depth = getDepth() + 1;
         this.previousNode = previousNode;
         solver = previousNode.getSolver();
 
-        worldState = previousNode.worldState.putVideoInCacheAndDeepCopy(video, cache);
-        if (rateChanges(video, cache) > RATING_THRESHOLD) {
+        worldState = previousNode.worldState.putVideoInCacheAndDeepCopy(videoId, cacheId);
+        if (rateChanges(videoId, cacheId) > RATING_THRESHOLD) {
             discared = false;
             ComputePossibleChanges();
         }
@@ -40,7 +40,7 @@ public class Node {
         discared = false;
     }
 
-    private int rateChanges(int video, int cache) {
+    private int rateChanges(int videoId, int cacheId) {
         rating = 0; //TODO: write this so that it rates this action!
         return rating;
     }

@@ -12,11 +12,17 @@ public class WorldState {
         cacheList = new ArrayList<>();
     }
 
+    public void addToCacheList(Cache cache) {
+        cacheList.add(cache);
+    }
+
     int getScore(int dc)
     {
-        private int totalScore;
+        int totalScore;
 
-        totalScore = (()-()) * 1000;
+        totalScore = ((1)-(1)) * 1000;
+
+        return 0;
     }
 
     public WorldState putVideoInCacheAndDeepCopy(int videoId, int cacheID) {
