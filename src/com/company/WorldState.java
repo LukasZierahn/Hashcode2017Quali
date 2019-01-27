@@ -11,4 +11,8 @@ public class WorldState {
     WorldState() {
         cacheList = new ArrayList<>();
     }
+
+    public List<Cache> getCacheList() {
+        return cacheList;
+    }
 }
