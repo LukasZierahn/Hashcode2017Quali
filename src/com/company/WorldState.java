@@ -11,4 +11,11 @@ public class WorldState {
     WorldState() {
         cacheList = new ArrayList<>();
     }
+
+    int getScore(int dc)
+    {
+        private int totalScore;
+
+        totalScore =
+    }
 }
