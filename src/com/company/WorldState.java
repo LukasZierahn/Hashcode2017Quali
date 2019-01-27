@@ -16,6 +16,6 @@ public class WorldState {
     {
         private int totalScore;
 
-        totalScore =
+        totalScore = (()-()) * 1000;
     }
 }
