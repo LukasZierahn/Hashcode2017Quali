@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Solver {
     private List<Video> videos; //this should be a list of videos from the videos class
-    private List<Connection> connections;
     Node baseNode;
 
     int currentHighScore = 0;
@@ -15,10 +14,6 @@ public class Solver {
 
     public void readWorldStateFromFile(String path) {
         //this has to read the file into variables in this class and into a worldstate!
-    }
-
-    public List<Connection> getConnections() {
-        return connections;
     }
 
     public List<Video> getVideos() {
