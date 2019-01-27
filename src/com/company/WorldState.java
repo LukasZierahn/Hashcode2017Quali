@@ -12,6 +12,10 @@ public class WorldState {
         cacheList = new ArrayList<>();
     }
 
+    public WorldState putVideoInCacheAndDeepCopy(int videoId, int cacheID) {
+        return this; //TODO: implement this, it has to deep copy and update which video fits where!
+    }
+
     public List<Cache> getCacheList() {
         return cacheList;
     }
