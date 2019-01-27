@@ -7,4 +7,8 @@ public class Video {
     public int getId() {
         return id;
     }
+
+    public int getSize() {
+        return size;
+    }
 }
