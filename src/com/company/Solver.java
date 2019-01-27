@@ -9,8 +9,7 @@ public class Solver {
     int currentHighScore = 0;
 
     Solver() {
-        baseNode.depth = 0;
-        baseNode.previousNode = null;
+        baseNode = new Node();
     }
 
     public void readWorldStateFromFile(String path) {

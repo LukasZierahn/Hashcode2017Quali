@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    Node previousNode;
+    private Node previousNode;
 
 
-    int depth = -1;
+    private int depth = -1;
 
     private int score = 0;
 
@@ -23,6 +23,10 @@ public class Node {
     Node() {
         outgoingNodes = new ArrayList<Node>();
         depth = 0;
+    }
+
+    public void ComputePossibleChanges() {
+
     }
 
     public int getDepth() {
